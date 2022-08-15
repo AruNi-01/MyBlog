@@ -8,16 +8,15 @@ Simple is beautiful.
 
 1. Clone the repository and install dependencies：
 
-```bash
-pnpm i
-```
+    ```bash
+    pnpm i
+    ```
 
 2. Local startup server in `localhost:8080`:
 
-```bash
-pnpm docs:dev
-```
+    ```bash
+    pnpm docs:dev
+    ```
 
 ## Thanks
-- Power by [VuePress](https://v2.vuepress.vuejs.org/)
-- Theme by [Gungnir](https://github.com/Renovamen/vuepress-theme-gungnir)
+- Power by [VuePress](https://v2.vuepress.vuejs.org/) & Theme by [Gungnir](https://github.com/Renovamen/vuepress-theme-gungnir)
