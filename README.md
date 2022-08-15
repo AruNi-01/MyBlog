@@ -1,29 +1,23 @@
-# Krahets Blog
+# AruNi_lu's Blog
 
-This is my blog, it is powered by [VuePress 2](https://v2.vuepress.vuejs.org/) and themed by [Gungnir](https://github.com/Renovamen/vuepress-theme-gungnir).
+Simple is beautiful.
 
 ## Usage
 
-Clone the repo and install dependencies:
+> If you want a blog like this too, just take the following two steps.
+
+1. Clone the repository and install dependencies：
 
 ```bash
 pnpm i
 ```
 
-Start developing the site:
+2. Local startup server in `localhost:8080`:
 
 ```bash
 pnpm docs:dev
 ```
 
-Build for production with minification:
-
-```bash
-pnpm docs:build
-```
-
-Have fun!
-
-## License
-
-All the articles are licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+## Thanks
+- Power by [VuePress](https://v2.vuepress.vuejs.org/)
+- Theme by [Gungnir](https://github.com/Renovamen/vuepress-theme-gungnir)
