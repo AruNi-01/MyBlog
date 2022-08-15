@@ -4,7 +4,7 @@ Simple is beautiful.
 
 ## Usage
 
-> If you want a blog like this too, just take the following two steps.
+> If you want a blog like this, just take the following two steps.
 
 1. Clone the repository and install dependencies：
 

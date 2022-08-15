@@ -145,8 +145,8 @@ export default defineUserConfig({
 
       pwa: true,
       readingTime: {
-        wordsPerMinuteCN: 100,
-        wordsPerMinuteEN: 50,
+        wordsPerMinuteCN: 200,
+        wordsPerMinuteEN: 100,
         excludeCodeBlock: true, 
         excludeTexBlock: true
       }
@@ -162,7 +162,7 @@ export default defineUserConfig({
 
   markdown: {
     extractHeaders: {
-      level: [2, 3]
+      level: [2, 3, 4]
     }
   },
 
