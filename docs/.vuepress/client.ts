@@ -1,3 +1,5 @@
+// 添加图标，https://oh-vue-icons.js.org/cn 网站上
+
 import { defineClientConfig } from "@vuepress/client";
 import { addIcons } from "oh-vue-icons";
 import {

@@ -183,15 +183,15 @@ export default defineUserConfig({
 
   plugins: [
       baiduTongjiPlugin({
-        "id": "<script>\n" +
-            "var _hmt = _hmt || [];\n" +
-            "(function() {\n" +
-            "  var hm = document.createElement(\"script\");\n" +
-            "  hm.src = \"https://hm.baidu.com/hm.js?a74d89eb0ac90eeb168fce0e2ebc3073\";\n" +
-            "  var s = document.getElementsByTagName(\"script\")[0]; \n" +
-            "  s.parentNode.insertBefore(hm, s);\n" +
-            "})();\n" +
-            "</script>\n"
+        id: "<script>" +
+            "var _hmt = _hmt || [];" +
+            "(function() {" +
+            "  var hm = document.createElement(\"script\");" +
+            "  hm.src = \"https://hm.baidu.com/hm.js?a74d89eb0ac90eeb168fce0e2ebc3073\";" +
+            "  var s = document.getElementsByTagName(\"script\")[0];" +
+            "  s.parentNode.insertBefore(hm, s);" +
+            "})();" +
+            "</script>"
       })
   ]
 });
