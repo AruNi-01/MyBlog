@@ -7,6 +7,8 @@ import { navbar, sidebar } from "./configs";
 
 const isProd = process.env.NODE_ENV === "production";
 
+const { baiduTongjiPlugin } = require("@renovamen/vuepress-plugin-baidu-tongji");
+
 export default defineUserConfig({
   head: [
     [
@@ -47,6 +49,8 @@ export default defineUserConfig({
 
   // configure default theme
   theme: gungnirTheme({
+    navbarTitle: "AruNi's Blog",
+
     repo: "AruNi-01/github.AruNi.io",
     // docsDir: "docs",
 
@@ -140,6 +144,17 @@ export default defineUserConfig({
       mdPlus: {
         all: true
       },
+      giscus: {
+        repo: "AruNi-01/AruNi-01.github.io",
+        repoId: "R_kgDOH0r47Q",  // 必须，string，在 Giscus 官网上生成
+        category: "Announcements",  // 必须
+        categoryId: "DIC_kwDOH0r47c4CQ2RS",  // 必须，string，在 Giscus 官网上生成
+        lang: "zh-CN",  // 可选，string，default="auto"（跟随网站语言，如果 Giscus 不支持你的网站的语言，则会使用 "en"）
+        lazyLoad: true,
+      },
+      search: {
+
+      },
       // ga: "G-EE8M2S3MPB",
       // ba: "10b7bc420625758a319d6b23aed4700f",
 
@@ -167,5 +182,16 @@ export default defineUserConfig({
   },
 
   plugins: [
+      baiduTongjiPlugin({
+        "id": "<script>\n" +
+            "var _hmt = _hmt || [];\n" +
+            "(function() {\n" +
+            "  var hm = document.createElement(\"script\");\n" +
+            "  hm.src = \"https://hm.baidu.com/hm.js?a74d89eb0ac90eeb168fce0e2ebc3073\";\n" +
+            "  var s = document.getElementsByTagName(\"script\")[0]; \n" +
+            "  s.parentNode.insertBefore(hm, s);\n" +
+            "})();\n" +
+            "</script>\n"
+      })
   ]
 });

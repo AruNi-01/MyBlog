@@ -16,10 +16,6 @@ links:
         url: https://doocs.github.io/advanced-java/#/
         img: /img/links/advanced_java.png
         desc: Java 工程师进阶知识
-      - sitename: 超级简历
-        url: https://www.wondercv.com/
-        img: /img/links/wondercv.png
-        desc: 专业简历生成
   - title: 数据结构和算法
     items:
       - sitename: 代码随想录
