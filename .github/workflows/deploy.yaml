@@ -36,7 +36,7 @@ jobs:
 
       # 打包并生成静态文件
       - name: Build site
-        run: pnpm build
+        run: pnpm docs:build
 
       # 推送静态文件到 gh-pages 分支
       - name: Deploy
