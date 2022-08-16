@@ -25,7 +25,7 @@ VuePress 的优点：
 - 简洁至上，以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作；
 - Vue 驱动，享受 Vue + webpack 的开发体验，可以在 Markdown 中使用 Vue 组件，又可以使用 Vue 来开发自定义主题；
 - 高性能，VuePress 会为每个页面预渲染生成静态的 HTML，同时，每个页面被加载的时候，将作为 SPA 运行；
-- 易部署，VuePress 有很多种部署方式，且都相对较简单。
+- 易部署，VuePress 有很多种部署方式，且都相对较简单。本站部署到 GitHub Pages，[Github Actions](https://docs.github.com/cn/actions)（Github 的持续集成服务）自动实现 commit 后推送静态文件到仓库的指定分支。
 
 ## 为什么要搭建博客 ？
 
