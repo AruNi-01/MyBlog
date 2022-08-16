@@ -63,14 +63,21 @@ export default defineUserConfig({
       description: "The most regretful thing in life is that I could have.",
       sns: {
         github: {
-          icon: "bi-github",
+          icon: "co-github",
           link: "https://github.com/AruNi-01"
         },
         leetcode: {
-          icon: "co-code",
+          icon: "co-leetcode",
           link: "https://leetcode.cn/u/aruni_lu/"
         },
-        email: "1298911600@qq.com"
+        algorithm_records: {
+          icon: "bi-archive",
+          link: "https://www.wolai.com/aruni-01/fKuL9hqz8MhXqvcHrn31uF",
+        },
+        about_me: {
+          icon: "co-about-me",
+          link: "https://www.wolai.com/aruni-01/tURqL5MA7c8U1wxK7MW9eG",
+        },
       }
     },
 
