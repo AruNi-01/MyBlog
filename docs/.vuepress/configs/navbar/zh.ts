@@ -5,7 +5,7 @@ export const zh: NavbarConfig = [
   {
     text: "首页",
     link: "/",
-    icon: "fa-fort-awesome"
+    icon: "hi-solid-home"
   },
   {
     text: "标签",
@@ -15,6 +15,6 @@ export const zh: NavbarConfig = [
   {
     text: "链接",
     link: "/links/",
-    icon: "fa-satellite-dish"
+    icon: "fa-link"
   }
 ];

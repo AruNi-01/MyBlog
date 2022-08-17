@@ -5,7 +5,7 @@ export const en: NavbarConfig = [
   {
     text: "Home",
     link: "/",
-    icon: "fa-fort-awesome"
+    icon: "hi-solid-home"
   },
   {
     text: "Tags",
@@ -15,6 +15,11 @@ export const en: NavbarConfig = [
   {
     text: "Links",
     link: "/links/",
-    icon: "fa-satellite-dish"
-  }
+    icon: "fa-link"
+  },
+  // {
+  //   text: "About",
+  //   link: "/about/",
+  //   icon: "co-grav"
+  // }
 ];

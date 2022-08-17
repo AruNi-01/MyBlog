@@ -16,6 +16,8 @@ import {
     RiSailboatLine,
     RiVuejsLine,
     CoCode,
+    HiSolidHome,
+    FaLink,
 
     //----------------------
     CoGithub,
@@ -23,6 +25,7 @@ import {
     CoAboutMe,
     CoTencentQq,
     BiArchive,
+    CoGrav,
 } from "oh-vue-icons/icons";
 
 addIcons(
@@ -37,14 +40,17 @@ addIcons(
     OiGitCompare,
     OiRocket,
     RiSailboatLine,
+    HiSolidHome,
+    FaLink,
 
-    //----------------------
+//----------------------
     CoCode,
     CoGithub,
     CoLeetcode,
     CoAboutMe,
     CoTencentQq,
     BiArchive,
+    CoGrav,
 );
 
 export default defineClientConfig({});
