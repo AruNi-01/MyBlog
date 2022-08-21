@@ -5,7 +5,7 @@
 
 # Usage
 
-> 需要 node.js 环境
+> 需要 `node.js` 环境
 
 1. 克隆此仓库到本地，下载依赖：
    > 若未使用过 `pnpm` 包管理器（高性能的 `npm`），请先下载：`npm i -g pnpm`

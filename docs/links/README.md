@@ -26,16 +26,4 @@ links:
         url: https://labuladong.gitee.io/algo/
         img: /img/links/labuladong.png
         desc: 传递算法思维
-      - sitename: liweiwei
-        url: https://leetcode.cn/u/liweiwei1419/
-        img: /img/links/liweiwei.png
-        desc: LeetCode 优秀题解
-      - sitename: 宫水三叶
-        url: https://leetcode.cn/u/ac_oier/
-        img: /img/links/gongshui.png
-        desc: LeetCode 优秀题解
-      - sitename: Krahets
-        url: https://leetcode.cn/u/jyd/
-        img: /img/links/krahets.png
-        desc: LeetCode 优秀题解
 ---

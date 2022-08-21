@@ -1,6 +1,5 @@
 import { viteBundler } from "@vuepress/bundler-vite";
 import { webpackBundler } from "@vuepress/bundler-webpack";
-import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 import { defineUserConfig } from "vuepress";
 import { gungnirTheme, i18n } from "vuepress-theme-gungnir";
 import { navbar, sidebar } from "./configs";
@@ -8,8 +7,6 @@ import { navbar, sidebar } from "./configs";
 const isProd = process.env.NODE_ENV === "production";
 
 const { baiduTongjiPlugin } = require("@renovamen/vuepress-plugin-baidu-tongji");
-
-const { path } = require("@vuepress/utils");
 
 export default defineUserConfig({
   head: [
@@ -122,7 +119,7 @@ export default defineUserConfig({
     locales: {
       /**
        * English locale config
-       * As the default locale is English, we don't need to set all of the locale fields
+       * As the default locale is English, we don't need to set all the locale fields
        */
       "/": {
         // navbar
@@ -195,39 +192,6 @@ export default defineUserConfig({
       baiduTongjiPlugin({
         id: "a74d89eb0ac90eeb168fce0e2ebc3073"
       }),
-    ],
-    [
-      'player',
-      {
-        //网易云单个歌曲id
-        songIds: ['29723011','1887893189','1421069053'],
-        //网易云歌单
-        playlist: '7431764777',
-        showPlaylist: false,
-        //是否禁用网易云音乐，如果你选择禁用，那么就将使用本地的歌曲，请传入链接
-        disabledNetEaseMusic: true,
-        disableSpace: false,    // 空格暂停/播放
-
-        //请求接口的baseURL
-        serverUrl: 'https://netease-cloud-music-api-teal-eight.vercel.app/',
-
-        //本地歌曲
-        localSongs: {
-          coverUrl: '/music/cover/changes.jpg',
-          songs: [
-            {
-              path: '/music/songs/王OK - Shadow Of The Sun.flac',
-              songName: '王OK - Shadow Of The Sun',
-              cover: '/music/cover/Shadow Of The Sun.jpg'
-            },
-            // {
-            //   path: '/music/songs/',
-            //   songName: '',
-            //   cover: '/music/cover/'
-            // },
-          ]
-        }
-      }
     ],
   ]
 });
