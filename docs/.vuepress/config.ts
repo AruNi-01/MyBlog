@@ -58,7 +58,7 @@ export default defineUserConfig({
     // personal information
     personalInfo: {
       name: "AruNi_Lu",
-      avatar: "/img/avatar.png",
+      avatar: "https://aruni-01-github-io.oss-cn-beijing.aliyuncs.com/public/avatar.png",
       description: "The most regretful thing in life is that I could have.",
       sns: {
         github: {
@@ -83,15 +83,15 @@ export default defineUserConfig({
     // header images on home page
     homeHeaderImages: [
       {
-        path: "/img/home-bg/1.jpg",
+        path: "https://aruni-01-github-io.oss-cn-beijing.aliyuncs.com/public/bg1.jpg",
         mask: "rgba(40, 57, 101, .4)"
       },
       {
-        path: "/img/home-bg/2.jpg",
+        path: "https://aruni-01-github-io.oss-cn-beijing.aliyuncs.com/public/bg2.jpg",
         mask: "rgba(40, 57, 101, .4)"
       },
       {
-        path: "/img/home-bg/3.jpg",
+        path: "https://aruni-01-github-io.oss-cn-beijing.aliyuncs.com/public/bg3.jpg",
         mask: "rgba(40, 57, 101, .4)"
       }
     ],
@@ -101,7 +101,7 @@ export default defineUserConfig({
       tags: {
         subtitle: "Here are all the tags and timelines.",
         bgImage: {
-          path: "https://run-notes.oss-cn-beijing.aliyuncs.com/notes/tags.jpg",
+          path: "https://aruni-01-github-io.oss-cn-beijing.aliyuncs.com/public/tags.jpg",
           mask: "rgba(3,0,0,0.55)"
         }
       },
@@ -109,7 +109,7 @@ export default defineUserConfig({
         subtitle:
           "Here are some websites that I think are good.",
         bgImage: {
-          path: "https://run-notes.oss-cn-beijing.aliyuncs.com/notes/links.jpg",
+          path: "https://aruni-01-github-io.oss-cn-beijing.aliyuncs.com/public/links.jpg",
           mask: "rgba(3,0,0,0.17)"
         }
       }

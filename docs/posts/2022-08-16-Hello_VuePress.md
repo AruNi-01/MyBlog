@@ -8,7 +8,7 @@ tags:
 
 layout: Post
 useHeaderImage: true
-headerImage: /img/header/2022-8-16-Hello_VuePress.png
+headerImage: https://aruni-01-github-io.oss-cn-beijing.aliyuncs.com/posts/2022-8-16-Hello_VuePress.png
 headerMask: rgba(40, 57, 101, .4)
 catalog: true
 ---
