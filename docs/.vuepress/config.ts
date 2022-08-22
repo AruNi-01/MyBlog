@@ -101,7 +101,7 @@ export default defineUserConfig({
       tags: {
         subtitle: "Here are all the tags and timelines.",
         bgImage: {
-          path: "/img/pages/tags.jpg",
+          path: "https://run-notes.oss-cn-beijing.aliyuncs.com/notes/tags.jpg",
           mask: "rgba(3,0,0,0.55)"
         }
       },
@@ -109,7 +109,7 @@ export default defineUserConfig({
         subtitle:
           "Here are some websites that I think are good.",
         bgImage: {
-          path: "/img/pages/links.jpg",
+          path: "https://run-notes.oss-cn-beijing.aliyuncs.com/notes/links.jpg",
           mask: "rgba(3,0,0,0.17)"
         }
       }
