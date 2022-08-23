@@ -27,4 +27,4 @@
 
 # Thanks
 - Power by [VuePress 2](https://v2.vuepress.vuejs.org/) & Theme by [Gungnir](https://github.com/Renovamen/vuepress-theme-gungnir)
-- Deploy by [GitHub Pages](https://docs.github.com/cn/pages/quickstart)
+- Deploy by [GitHub Pages](https://docs.github.com/cn/pages/quickstart) | [Vercel](https://vercel.com/)
