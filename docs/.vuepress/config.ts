@@ -61,7 +61,7 @@ export default defineUserConfig({
     personalInfo: {
       name: "AruNi_Lu",
       avatar: "https://aruni-01-github-io.oss-cn-beijing.aliyuncs.com/public/avatar.png",
-      description: "The most regretful thing in life is that I could have.",
+      description: "The last thing I regret in life is that I could have been.",
       sns: {
         github: {
           icon: "co-github",
