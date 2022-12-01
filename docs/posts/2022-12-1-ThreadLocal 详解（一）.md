@@ -9,7 +9,7 @@ tags:
 
 layout: Post
 useHeaderImage: true
-headerImage: https://aruni-01-github-io.oss-cn-beijing.aliyuncs.com/posts/ThreadLocal_1.png
+headerImage: https://aruni-01-github-io.oss-cn-beijing.aliyuncs.com/posts/ThreadLocal_1.jpg
 headerMask: rgba(40, 57, 101, .4)
 catalog: true
 ---
