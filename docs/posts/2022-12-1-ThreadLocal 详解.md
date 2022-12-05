@@ -1,6 +1,6 @@
 ---
 title: ThreadLocal 详解
-subtitle: 吃透 ThreadLocal 底层实现「Tag - Java 并发」
+subtitle: 吃透 ThreadLocal「Tag - Java 并发」
 author: AruNi_Lu
 date: 2022-12-1
 tags:
@@ -120,8 +120,8 @@ Process finished with exit code 0
 - 当 Thread 销毁后，对应的 ThreadLocalMap 也随之销毁，**减少内存占用**。
 - 当并发量较大时，因为所有的 Entry 在一个 Map 中，**所有线程对同一个 ThreadLocal 变量的操作都在同一个 Map 中（Map 中一个线程对应一个 key），导致访问性能下降**。而现在的设计每个线程自己有一个 Map，访问自己的效率更高。
 
-::: info
-**Thread 是怎么拥有 ThreadLocalMap 的呢**？
+::: info Thread 是怎么拥有 ThreadLocalMap 的呢？
+🤔
 :::
 
 在 Thread 类中有一个类型为 `ThreadLocal.ThreadLocalMap` 的实例变量 `threadLocals`，默认值为 null。所以当创建线程时，每个线程都有一个自己的 ThreadLocalMap。
@@ -196,14 +196,14 @@ public class ThreadLocal<T> {
 
 先简单的了解下什么是内存泄漏以及 Java 的四种引用类型。
 
-::: info
-**什么是内存泄漏**？
+::: info 什么是内存泄漏？
+🤔
 :::
 
 内存泄漏就是已经不再使用得内存得不到释放，让这块内存空间白白的被占有，一旦内存泄漏出现的次数多了，就可能导致 OOM。
 
-::: info
-**Java 的四种引用类型**
+::: info Java 的四种引用类型
+🤔
 :::
 
 Java 的四种引用类型如下：
@@ -213,8 +213,8 @@ Java 的四种引用类型如下：
 - **弱引用**：使用 WeakReference 修饰的对象被称为弱引用，**只要发生垃圾回收**，若这个对象 **只被弱引用指向，那么就会被回收**。
 - **虚引用**：虚引用是最弱的引用，在 Java 中使用 PhantomReference 进行定义。虚引用中唯一的作用就是 **用队列接收对象即将死亡的通知**。
 
-::: info
-**ThreadLocal 内存泄漏分析**
+::: info ThreadLocal 内存泄漏分析
+🤔
 :::
 
 根据 ThreadLocal 的内部实现原理，每个 Thread 维护了一个 ThreadLocalMap，key 为使用 **弱引用** 的ThreadLocal，value 为我们要存储的对象。
@@ -239,8 +239,8 @@ Java 的四种引用类型如下：
 
 既然把 key 设置成弱引用会有内存泄漏的风险，为什么 JDK 团队还要这样做呢？先来看看下面这个问题。
 
-::: info
-**ThreadLocal 的 key 是弱引用，发生 GC 后 key 是否为 null 呢**？
+::: info ThreadLocal 的 key 是弱引用，发生 GC 后 key 是否为 null 呢？
+🤔
 :::
 
 还是用上面的图来分析：
@@ -479,8 +479,8 @@ public class ThreadLocal<T> {
 
 对过期键的清理过程比较复杂，我们重点来看看替换过期数据的 `replaceStaleEntry()` 方法。
 
-::: info
-**replaceStaleEntry() 方法解读**
+::: info replaceStaleEntry() 方法解读
+🤔
 :::
 
 在执行 set 方法的时候，如果往后探测的过程中遇到了过期的数据（null key），则会执行替换过期数据的方法 `replaceStaleEntry()`，这个方法的源码如下：
@@ -670,8 +670,8 @@ private boolean cleanSomeSlots(int i, int n) {
 
 ![image-20221205154830182](https://run-notes.oss-cn-beijing.aliyuncs.com/notes/202212051548294.png)
 
-::: info
-**replaceStaleEntry 为什么进行探测式清理后还要进行一次启发式清理呢**？
+::: info replaceStaleEntry 为什么进行探测式清理后还要进行一次启发式清理呢？
+🤔
 :::
 
 我们知道，探测式清理在遇到 Entry 为 null 时就会停止清理，所以为了清理到后面的一些槽位，就再进行一次启发式清理。这样可以尽可能的清理到更多的过期数据。
@@ -728,8 +728,8 @@ private void expungeStaleEntries() {
         }
 ```
 
-::: info
-**resize() 扩容流程**
+::: info resize() 扩容流程
+🤔
 :::
 
 真正的扩容函数是 `resize()`，源码如下：
@@ -806,8 +806,8 @@ public class ThreadLocal<T> {
 
 - 当 **ThreadLocalMap 为空时**，则调用 **`setInitialValue()` 方法**。
 
-::: info
-**setInitialValue()**
+::: info setInitialValue()
+🤔
 :::
 
 先来看看 `setInitialValue()` 方法，从上面的分析可知，有两种情况会走此方法：
@@ -838,8 +838,8 @@ private T setInitialValue() {
 
 答案其实都在 `set` 方法里，可能会进行 **探测式清理** 操作、**rehash()** 等。
 
-::: info
-**getEntry(ThreadLocal<?> key)**
+::: info getEntry(ThreadLocal key)
+🤔
 :::
 
 在 ThreadLocalMap 不为 null 时，就会调用 `getEntry(ThreadLocal<?> key)` 来获取当前 ThreadLocal 对应的 Entry，源码如下：
@@ -887,8 +887,8 @@ private Entry getEntryAfterMiss(ThreadLocal<?> key, int i, Entry e) {
 
 可以看到，在向后查找时，若遇到过期数据，会执行探测式清理，探测式清理除了会清理掉过期数据，还会进行 rehash（槽位重置），所以清理完后继续从该位置开始遍历。
 
-::: info
-**总结**
+::: info 总结
+🤔
 :::
 
 当调用 `ThreadLocal.get()` 方法时，流程如下：
@@ -971,8 +971,8 @@ Process finished with exit code 0
 
 所以借助于 `inheritableThreadLocals`，可以实现创建线程向被创建线程进行数据的传递。
 
-::: info
-**InheritableThreadLocal 的缺陷**
+::: info InheritableThreadLocal 的缺陷
+🤔
 :::
 
 InheritableThreadLocal 仍然有缺陷，一般我们做异步化处理都是使用的线程池，线程池是线程复用的逻辑，而 InheritableThreadLocal 是在 Thread 构造方法中的 `init()` 方法给赋值的，所以这里会存在问题。
