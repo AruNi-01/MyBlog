@@ -12,7 +12,7 @@ pnpm docs:build
 cd docs/.vuepress/dist
 
 # 如果是发布到自定义域名
-echo 'aruni.cn' > CNAME
+# echo 'www.example.com' > CNAME
 
 git init
 git add -A
