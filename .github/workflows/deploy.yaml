@@ -44,4 +44,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: docs/.vuepress/dist  # 静态文件生成目录
-          cname: aruni-01.github.io  # 你网站的域名
+          cname: aruni.cn  # 你网站的域名
