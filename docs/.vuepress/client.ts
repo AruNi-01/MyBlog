@@ -10,7 +10,7 @@ import {
     CoGithub,
     CoLeetcode,
     CoAboutMe,
-    CoTencentQq,
+    CoQq,
     BiArchive,
     CoGrav,
 } from "oh-vue-icons/icons";
@@ -22,7 +22,7 @@ addIcons(
     CoGithub,
     CoLeetcode,
     CoAboutMe,
-    CoTencentQq,
+    CoQq,
     BiArchive,
     CoGrav,
 );

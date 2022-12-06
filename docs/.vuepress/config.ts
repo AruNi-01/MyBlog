@@ -69,6 +69,10 @@ export default defineUserConfig({
           icon: "co-leetcode",
           link: "https://leetcode.cn/u/aruni_lu/"
         },
+        add_qq: {
+          icon: "co-qq",
+          link: "tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1298911600"
+        },
         algorithm_records: {
           icon: "bi-archive",
           link: "https://www.wolai.com/aruni-01/fKuL9hqz8MhXqvcHrn31uF",
