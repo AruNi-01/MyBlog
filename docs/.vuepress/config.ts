@@ -53,7 +53,7 @@ export default defineUserConfig({
     repo: "AruNi-01/github.AruNi.io",
     // docsDir: "docs",
 
-    hitokoto: "https://v1.hitokoto.cn?c=i", // enable hitokoto (一言) or not?
+    // hitokoto: "https://v1.hitokoto.cn?c=i", // enable hitokoto (一言) or not?
 
     // personal information
     personalInfo: {
@@ -144,9 +144,9 @@ export default defineUserConfig({
     themePlugins: {
       // only enable git plugin in production mode
       git: isProd,
-      katex: true,
-      mermaid: true,
-      chartjs: true,
+      katex: false,
+      mermaid: false,
+      chartjs: false,
       mdPlus: {
         all: true
       },
