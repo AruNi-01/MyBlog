@@ -1,0 +1,1 @@
+const a=JSON.parse('{"key":"v-29d40594","path":"/tags/java-%E5%B9%B6%E5%8F%91/","title":"Java \u5E76\u53D1 | Tags","lang":"en-US","frontmatter":{"title":"Java \u5E76\u53D1 | Tags","layout":"Tags","blog":{"type":"category","name":"Java \u5E76\u53D1","key":"tag"}},"excerpt":"","headers":[],"git":{},"filePathRelative":null}');export{a as data};
