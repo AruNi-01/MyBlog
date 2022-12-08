@@ -262,9 +262,9 @@ Java 的四种引用类型如下：
 
 ### 2.5 value 为什么不设计成弱引用呢？
 
-首先我们得知道，**value 除了指向 Object 外，没有任何引用指向它**。所以如果 value 被设计成弱引用，那么它 **肯定会被 GC 回收**，那再调用 ThreadLocal.get() 时，得到的就是一个 null 值。
+首先我们得知道，**Object（存储的对象）除了被 value 指向外，没有任何引用指向它**。所以如果 value 被设计成弱引用，则 **Object 就只被弱引用指向**，那么 **Object 肯定会被 GC 回收**，那再调用 `ThreadLocal.get()` 时，得到的就是一个 null 值。
 
-所以，value 是绝对不可以设计成弱引用的。
+所以，value 是绝对不可以设计成弱引用的，我们要确保它指向的 Object 不为 null。
 
 ## 3. ThreadLocal 应用场景
 
@@ -971,6 +971,8 @@ Process finished with exit code 0
 
 所以借助于 `inheritableThreadLocals`，可以实现创建线程向被创建线程进行数据的传递。
 
+在 JDK 17 中 Thread 的 `init()` 方法不再被使用，Thread 的构造函数中不会调用 `init()` 方法，而是直接把 `init()` 的代码放到自己的构造函数中，所以只需要调用本身的构造方法即可。
+
 ::: info InheritableThreadLocal 的缺陷
 🤔
 :::
@@ -989,8 +991,7 @@ InheritableThreadLocal 仍然有缺陷，一般我们做异步化处理都是使
 
 由于线程池会复用 Thread 对象，因此 Thread 类的成员变量 threadLocals（ThreadLocalMap）也会被复用。
 
-如果在一个线程处理完当前任务后，**忘记将 threadlocals 进行清理 `remove()`**，并且这个线程在处理下一个任务时，
-**不调用 `set()` 设置初始值**（调用 `set()` 会将之前 ThreadLocal key 对应的 value 修改掉），那么这时也能获取到这个 threadlocals。
+如果在一个线程处理完当前任务后，**忘记将该 ThreadLocal 进行清理 `remove()`**，并且这个线程在处理下一个任务时，**不调用 `set()` 设置值**（调用 `set()` 会将之前 ThreadLocal 对应的 value 修改掉），那么这时也 **能获取到之前的 ThreadLocal 变量对应的值**。
 
 例如，thread-1 在处理下一个任务时，能获取到上一个任务中 ThreadLocal 的值：
 

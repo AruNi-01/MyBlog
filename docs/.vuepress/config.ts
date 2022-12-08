@@ -103,7 +103,7 @@ export default defineUserConfig({
     // other pages
     pages: {
       tags: {
-        subtitle: "Here are all the tags and timelines.",
+        subtitle: "Here are the tags of all articles.",
         bgImage: {
           path: "https://aruni-01-github-io.oss-cn-beijing.aliyuncs.com/public/tags.jpg",
           mask: "rgba(3,0,0,0.55)"
@@ -111,7 +111,7 @@ export default defineUserConfig({
       },
       links: {
         subtitle:
-          "Here are some websites that I think are good.",
+          "Maybe these websites will help you.",
         bgImage: {
           path: "https://aruni-01-github-io.oss-cn-beijing.aliyuncs.com/public/links.jpg",
           mask: "rgba(3,0,0,0.17)"
@@ -162,8 +162,16 @@ export default defineUserConfig({
         lang: "zh-CN",  // 可选，string，default="auto"（跟随网站语言，如果 Giscus 不支持你的网站的语言，则会使用 "en"）
         lazyLoad: true,
       },
-      search: {
 
+      search: {
+        locales: {
+          "/": {
+            placeholder: "$ grep title | tag ..."
+          },
+          "/zh/": {
+            placeholder: "搜索 标题 | 标签 ..."
+          }
+        }
       },
       // ga: "G-EE8M2S3MPB",
       // ba: "10b7bc420625758a319d6b23aed4700f",
