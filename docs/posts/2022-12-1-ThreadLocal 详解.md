@@ -18,6 +18,10 @@ Java 并发系列 —— ThreadLocal 详解
 
 <!-- more --> 
 
+::: tip 本文内容：
+[[toc]]
+:::
+
 ## 1. 什么是 ThreadLocal？
 
 ThreadLocal 叫做本地线程变量，顾名思义，ThreadLocal 中存放的是 **当前线程的变量**，该变量对其他线程而言是 **隔离** 的。对于 ThreadLocal 存放的变量，在每个线程中都有一份自己的 **副本变量**，多个线程互不干扰。

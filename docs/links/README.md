@@ -16,7 +16,19 @@ links:
         url: https://doocs.github.io/advanced-java/#/
         img: /img/links/advanced_java.png
         desc: Java 工程师进阶知识
+    
   - title: 数据结构和算法
+    items:
+      - sitename: 代码随想录
+        url: https://programmercarl.com/
+        img: /img/links/suixianglu.png
+        desc: 一套完整的刷题计划
+      - sitename: labuladong 的算法小抄
+        url: https://labuladong.gitee.io/algo/
+        img: /img/links/labuladong.png
+        desc: 传递算法思维
+    
+  - title: 常用工具
     items:
       - sitename: 代码随想录
         url: https://programmercarl.com/
