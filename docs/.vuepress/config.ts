@@ -3,6 +3,7 @@ import { webpackBundler } from "@vuepress/bundler-webpack";
 import { defineUserConfig } from "vuepress";
 import { gungnirTheme, i18n } from "vuepress-theme-gungnir";
 import { navbar, sidebar } from "./configs";
+import { clipboardPlugin } from "vuepress-plugin-clipboard";
 
 const isProd = process.env.NODE_ENV === "production";
 
@@ -204,7 +205,15 @@ export default defineUserConfig({
       baiduTongjiPlugin({
         id: "a74d89eb0ac90eeb168fce0e2ebc3073"
       }),
-
+      clipboardPlugin({
+        staticIcon: false,
+        align: "bottom",
+        color: "var(--c-brand)",
+        backgroundTransition: false,
+        backgroundTransitionColor: "var(--code-bg-color)",    // default: var(--code-bg-color)
+        successText: "Copied",
+        successTextColor: "var(--c-brand)",
+      })
     ],
   ]
 });
