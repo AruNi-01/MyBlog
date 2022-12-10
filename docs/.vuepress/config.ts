@@ -206,14 +206,15 @@ export default defineUserConfig({
         id: "a74d89eb0ac90eeb168fce0e2ebc3073"
       }),
       clipboardPlugin({
-        staticIcon: false,
-        align: "bottom",
+        staticIcon: true,
+        align: "top",
         color: "var(--c-brand)",
         backgroundTransition: false,
         backgroundTransitionColor: "var(--code-bg-color)",    // default: var(--code-bg-color)
-        successText: "Copied",
+        successText: "Copied!",
         successTextColor: "var(--c-brand)",
-      })
+      }),
+
     ],
   ]
 });
