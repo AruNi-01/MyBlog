@@ -9,7 +9,7 @@ tags:
 
 layout: Post
 useHeaderImage: true
-headerImage: https://aruni-01-github-io.oss-cn-beijing.aliyuncs.com/posts/ThreadLocal_1.jpg
+headerImage: https://aruni-01-github-io.oss-cn-beijing.aliyuncs.com/posts/ThreadLocal.png
 headerMask: rgba(40, 57, 101, .4)
 catalog: true
 ---
@@ -114,7 +114,7 @@ Process finished with exit code 0
 
 在 JDK 1.8 中，ThreadLocal 的设计是：
 
-**每个 Thread 维护一个 Map（ThreadLocalMap），这个 Map 的 key 为 ThreadLocal 实例本身，value 为要存储的变量**。
+**每个 Thread 维护一个 Map（ThreadLocalMap），这个 Map 的 key 为 ThreadLocal 实例（弱引用），value 为要存储的变量**。
 
 ![image-20221201171027198](https://run-notes.oss-cn-beijing.aliyuncs.com/notes/202212011710278.png)
 
