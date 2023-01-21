@@ -17,9 +17,9 @@ export const en: NavbarConfig = [
     link: "/links/",
     icon: "fa-link"
   },
-  // {
-  //   text: "About",
-  //   link: "/about/",
-  //   icon: "co-grav"
-  // }
+  {
+    text: "Docs",
+    link: "/docs",
+    icon: "hi-solid-document-text"
+  }
 ];

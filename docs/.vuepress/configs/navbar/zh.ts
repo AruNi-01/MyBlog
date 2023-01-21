@@ -16,5 +16,10 @@ export const zh: NavbarConfig = [
     text: "链接",
     link: "/links/",
     icon: "fa-link"
+  },
+  {
+    text: "文档",
+    link: "/docs",
+    icon: "hi-solid-document-text"
   }
 ];

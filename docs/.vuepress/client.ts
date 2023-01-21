@@ -13,6 +13,7 @@ import {
     CoQq,
     BiArchive,
     CoGrav,
+    HiSolidDocumentText,
 } from "oh-vue-icons/icons";
 
 addIcons(
@@ -25,6 +26,7 @@ addIcons(
     CoQq,
     BiArchive,
     CoGrav,
+    HiSolidDocumentText,
 );
 
 export default defineClientConfig({});
