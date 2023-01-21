@@ -19,7 +19,7 @@ export const en: NavbarConfig = [
   },
   {
     text: "Docs",
-    link: "/docs",
+    link: "https://aruni.me/docs/",
     icon: "hi-solid-document-text"
   }
 ];
