@@ -74,10 +74,6 @@ export default defineUserConfig({
           icon: "co-qq",
           link: "tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1298911600"
         },
-        algorithm_records: {
-          icon: "bi-archive",
-          link: "https://www.wolai.com/aruni-01/fKuL9hqz8MhXqvcHrn31uF",
-        },
         about_me: {
           icon: "co-about-me",
           link: "https://www.wolai.com/aruni-01/tURqL5MA7c8U1wxK7MW9eG",
