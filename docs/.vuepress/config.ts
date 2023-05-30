@@ -84,7 +84,7 @@ export default defineUserConfig({
     // header images on home page
     homeHeaderImages: [
       {
-        path: "https://aruni-01-github-io.oss-cn-beijing.aliyuncs.com/public/bg1.jpg",
+        path: "https://api.wozsun.com/random-img/pc-light.php",
         mask: "rgba(40, 57, 101, .4)"
       },
       {
